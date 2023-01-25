@@ -4,6 +4,7 @@ import pyperclip
 
 
 def rpa_rename(filepath, filename, page_number):
+    '''The macro function that calls the micro functions'''
     open_file()
     locating_file(filepath, filename)
     open_save_as_window()
@@ -14,8 +15,7 @@ def rpa_rename(filepath, filename, page_number):
 
 def open_adobe_reader():
     '''Opening Adobe Reader'''
-    pyautogui.PAUSE = 1
-
+    pyautogui.PAUSE = 0.5
     pyautogui.press('winleft')
     pyautogui.write('adobe')
     pyautogui.press('enter')
@@ -35,10 +35,10 @@ def open_file():
 
 def locating_file(filepath, filename):
     '''Locating file to rename'''
+    pyautogui.PAUSE = 1
     pyautogui.write(f'{filepath}{filename}')
     time.sleep(1)
     pyautogui.press('enter')
-    time.sleep(1)
 
 
 def open_save_as_window():
@@ -59,9 +59,10 @@ def select_original_folder(filepath):
 
 def renaming_file(page_number):
     '''Renaming the file'''
+    pyautogui.PAUSE = 1
     pyperclip.copy(f'Página {page_number} - Modificado')
     pyautogui.hotkey('ctrl', 'v')
-    time.sleep(1)
+    time.sleep(0.5)
     pyautogui.press('enter')
 
 
