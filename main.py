@@ -1,20 +1,17 @@
 import os
-
+from src.utils.sheet_operations import create_sheet, update_sheet, save_sheet, close_sheet
 from src.utils.file_utils import get_page_number
-from src.utils.sheet_operations import create_sheet, save_sheet, update_sheet
-from src.utils.rpa import rpa_rename, open_adobe_reader, close_adobe_reader
+from src.rpa import rpa_rename, open_adobe_reader, close_adobe_application
 
 '''considerar ler a partir do arquivo yml'''
 filepath = 'C:\\RPA-ArtigoTeste\\'
 files = os.listdir(filepath)
 
+# Create the sheet and open the Adobe Reader application
 wb, sheet = create_sheet(filepath)
 open_adobe_reader()
 
-
-'''Loop to filter .pdf files, 
-apply the rpa_rename function and
-update the sheet'''
+# The loop that will filter valid .pdf files, apply the rpa_rename function and update the sheet.
 for file in files:
     if file.endswith('.pdf') and file[0].isdigit():
         number = get_page_number(file)
@@ -23,5 +20,7 @@ for file in files:
 
         update_sheet(sheet, file)
 
-close_adobe_reader()
+# Closing the Adobe Reader application, saving and closing the sheet.
+close_adobe_application()
 save_sheet(wb, filepath)
+close_sheet(wb)

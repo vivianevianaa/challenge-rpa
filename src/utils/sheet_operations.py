@@ -2,7 +2,11 @@ from openpyxl import Workbook
 
 
 def create_sheet(filepath):
-    '''Creating workbook and sheet with the static headers'''
+    """
+    The function create the workbook from openpyxl.
+    After that, the sheet is created with the static headers.
+    """
+
     wb = Workbook()
     sheet = wb.active
 
@@ -15,10 +19,21 @@ def create_sheet(filepath):
 
 
 def save_sheet(wb, filepath):
-    '''Saving sheet updates'''
+    """
+    Save the sheet after updates.
+    """
     wb.save(f'{filepath}/Relatório de execução.xlsx')
 
 
 def update_sheet(sheet, file):
-    '''Updating sheet'''
+    """
+    Updating sheet
+    """
     sheet.append([file, 'documento alterado'])
+
+
+def close_sheet(wb):
+    """
+    Closing workbook.
+    """
+    wb.close()
