@@ -1,6 +1,6 @@
 # RPA Challenge
 
-Texto explicativo:
+Texto explicativo: <br>
 O processo é iniciado acessando a pasta ´RPA-Artigo´, deve-se abrir documento por documento, 
 desde que ele seja .pdf e começado por um numeral. Após aberto o documento, abrir a janela de salvar como,
 renomear esse arquivo como “Página X – Modificado”, onde o número do documento denominado “X”, deve ser o
