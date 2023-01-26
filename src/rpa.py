@@ -39,33 +39,33 @@ def open_file():
 
 
 def locating_file(filepath, filename):
-    pyautogui.PAUSE = 0.5
+    pyautogui.PAUSE = 1
     pyautogui.write(f'{filepath}{filename}')
     pyautogui.press('enter')
-    time.sleep(0.5)
+    time.sleep(1)
 
 
 def open_save_as_window():
     pyautogui.hotkey('ctrl', 'shift', 's')
-    time.sleep(1)
+    time.sleep(3)
 
 
 def select_destiny_folder(filepath):
     tab = ['tab'] * 5
     pyautogui.press(tab)
     pyautogui.press('enter')
-    time.sleep(0.5)
+    time.sleep(1)
     pyautogui.write(filepath)
     pyautogui.press('enter')
-    time.sleep(0.5)
+    time.sleep(1)
 
 
 def renaming_file(page_number):
-    pyautogui.PAUSE = 0.5
+    pyautogui.PAUSE = 1
     pyperclip.copy(f'Página {page_number} - Modificado')
     pyautogui.hotkey('ctrl', 'v')
     pyautogui.press('enter')
-    time.sleep(0.5)
+    time.sleep(1)
 
 
 def close_adobe_file():

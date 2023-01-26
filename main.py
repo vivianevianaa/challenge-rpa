@@ -3,8 +3,8 @@ from src.utils.sheet_operations import create_sheet, update_sheet, save_sheet, c
 from src.utils.file_utils import get_page_number
 from src.rpa import rpa_rename, open_adobe_reader, close_adobe_application
 
-# Set the challenge folder and list the files
-filepath = 'C:\\RPA-ArtigoTeste\\'
+# Open the challenge folder and list the files
+filepath = os.path.join('C:\\RPA-Artigo\\')
 files = os.listdir(filepath)
 
 # Create the sheet and open the Adobe Reader application
