@@ -10,5 +10,5 @@ na coluna ´Nome do documento´ e na coluna ´Status´ inserir “documento alte
 E tanto a planilha quanto os documentos devem ser salvos na pasta original.
 
     1. Desenhar o fluxo do processo baseado no texto explicativo acima;
-        [Diagrama do fluxo](https://www.figma.com/file/o4w2j9nrMG0GGcajAUP77H/RPA-Challenge?node-id=0%3A1)
+        <a href="https://www.figma.com/file/o4w2j9nrMG0GGcajAUP77H/RPA-Challenge?node-id=0%3A1">Diagrama do fluxo</a>
     2. Desenvolver a automação do processo acima na plataforma Python.
