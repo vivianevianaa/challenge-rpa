@@ -7,6 +7,7 @@ def rpa_rename(filepath, filename, page_number):
     """
     Opens, renames and saves the file.
     """
+    pyautogui.PAUSE = 1
     try:
         open_file()
         locating_file(filepath, filename)
@@ -15,7 +16,7 @@ def rpa_rename(filepath, filename, page_number):
         renaming_file(page_number)
         close_adobe_file()
     except Exception as e:
-        print(f"Something went wrong. {e}")
+        print(f"Something went wrong: {e}")
 
 
 def open_adobe_reader():
@@ -24,7 +25,7 @@ def open_adobe_reader():
     """
     pyautogui.PAUSE = 0.5
     pyautogui.press('winleft')
-    pyautogui.write('adobe')
+    pyautogui.write('adobe acrobat')
     pyautogui.press('enter')
     time.sleep(1)
 
