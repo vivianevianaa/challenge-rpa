@@ -9,6 +9,6 @@ mesmo do documento original. A automação deve criar uma planilha com o nome ´
 na coluna ´Nome do documento´ e na coluna ´Status´ inserir “documento alterado”. Finalizado tudo, lembrar de fechar todas janelas.
 E tanto a planilha quanto os documentos devem ser salvos na pasta original.
 
-    1. Desenhar o fluxo do processo baseado no texto explicativo acima;
-        <a href="https://www.figma.com/file/o4w2j9nrMG0GGcajAUP77H/RPA-Challenge?node-id=0%3A1">Diagrama do fluxo</a>
-    2. Desenvolver a automação do processo acima na plataforma Python.
+1. Desenhar o fluxo do processo baseado no texto explicativo acima; <br>
+<a href="https://www.figma.com/file/o4w2j9nrMG0GGcajAUP77H/RPA-Challenge?node-id=0%3A1">Diagrama do fluxo</a> <br>
+2. Desenvolver a automação do processo acima na plataforma Python.
