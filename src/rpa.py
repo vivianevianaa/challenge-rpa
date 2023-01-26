@@ -7,7 +7,6 @@ def rpa_rename(filepath, filename, page_number):
     """
     Opens, renames and saves the file.
     """
-    pyautogui.PAUSE = 1
     try:
         open_file()
         locating_file(filepath, filename)
@@ -25,7 +24,7 @@ def open_adobe_reader():
     """
     pyautogui.PAUSE = 0.5
     pyautogui.press('winleft')
-    pyautogui.write('adobe acrobat')
+    pyautogui.write('Adobe Acrobat')
     pyautogui.press('enter')
     time.sleep(1)
 
@@ -40,10 +39,10 @@ def open_file():
 
 
 def locating_file(filepath, filename):
-    pyautogui.PAUSE = 1
+    pyautogui.PAUSE = 0.5
     pyautogui.write(f'{filepath}{filename}')
-    time.sleep(0.5)
     pyautogui.press('enter')
+    time.sleep(0.5)
 
 
 def open_save_as_window():
@@ -55,17 +54,18 @@ def select_destiny_folder(filepath):
     tab = ['tab'] * 5
     pyautogui.press(tab)
     pyautogui.press('enter')
+    time.sleep(0.5)
     pyautogui.write(filepath)
     pyautogui.press('enter')
-    time.sleep(1)
+    time.sleep(0.5)
 
 
 def renaming_file(page_number):
-    pyautogui.PAUSE = 1
+    pyautogui.PAUSE = 0.5
     pyperclip.copy(f'Página {page_number} - Modificado')
     pyautogui.hotkey('ctrl', 'v')
-    time.sleep(0.5)
     pyautogui.press('enter')
+    time.sleep(0.5)
 
 
 def close_adobe_file():
